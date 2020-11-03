@@ -2,17 +2,33 @@
 <html>
 
 <head>
-
-  <!-- TODO: ACA ACTUALICE LOS CSS NOSE SI QUEDO BIEN   -->
-
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0" />
+  <title>Chile Autos, Cotiza Tu Nuevo Vehiculo</title>
+  <!-- CSS  -->
   {% include "base/head.html" %}
   {% block head %}
   {% endblock head %}
-
+  
 </head>
 
 <body>
+
+  <header>
+
+    {% include "base/navbar.html" %}
+    {% block navbar %}
+    {% endblock navbar %}
+  </header>
+
+
+  {% include "base/banner.html" %}
+  {% block banner %}
+  {% endblock banner %}
+
+
   <br>
+
   <main class="container">
     {% block main %}
 
@@ -21,9 +37,14 @@
 
 
 
+  <!--Footer -->
+  {% include "base/footer.html" %}
+  {% block footer %}
+  {% endblock footer %}
 
 
-  <!--JavaScript at end of body for optimized loading-->
+
+
 
 
 

@@ -4,6 +4,7 @@ from django.contrib.auth.models import User
 # Create your models here.
 #Creacion de modelos asociados a lso vehiculos
 
+'''
 class Marca(models.Model):
     nombreMarca = models.CharField(max_length=45,blank=False)
 
@@ -35,8 +36,18 @@ class Vehiculo(models.Model):
     #Padre
     usuario = models.OneToOneField(User, on_delete=models.CASCADE)
 
+'''
 
-
-
+class Vehiculo(models.Model):
+    foto = models.FileField(max_length=45, blank=False)
+    marca = models.CharField(max_length=45, blank=False)
+    tipoVehiculo= models.CharField(max_length=45, blank=False)
+    combustible = models.CharField(max_length=45, blank=False)
+    transmision = models.CharField(max_length=45, blank=False)
+    uso=models.CharField(max_length=45, blank=False) 
+    modelo =  models.CharField(max_length=45, blank=False)
+    precio = models.IntegerField()
+    #Padre
+    usuario = models.OneToOneField(User, on_delete=models.CASCADE)
 
 

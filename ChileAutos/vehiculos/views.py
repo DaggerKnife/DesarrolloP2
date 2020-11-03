@@ -1,5 +1,6 @@
 from django.shortcuts import render,redirect
 from .forms import FormVehiculo
+from .models import Vehiculo
 from django.contrib import messages
 # Create your views here.
 
@@ -26,3 +27,15 @@ def crearVehiculo(request):
         context
     )
 
+
+def listarVehiculos(request):
+    vehiculos = Vehiculo.objects.all()
+    context = {
+        'titulo':'Listar vehiculos',
+        'vehiculo':vehiculos
+    }
+    return render(
+        request,
+        'vehiculos/listar_vehiculo.html',
+        context
+    )

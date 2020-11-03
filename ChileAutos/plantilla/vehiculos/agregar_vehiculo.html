@@ -1,9 +1,12 @@
 {% extends 'base/index.html' %}
 
+<!-- TODO: HAY QUE AGREGAR CSS -->
+
+
 {% block main %}
-    <form action="">
+    <form action="" method="POST" enctype="multipart/form-data">
         {% csrf_token %}
-        {{ formulario }}
+        {{ formulario}}
         <input type="submit" value="Agregar" >
 
     </form>

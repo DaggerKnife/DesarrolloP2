@@ -1,0 +1,10 @@
+{% extends 'base/index.html' %}
+
+{% block main %}
+    <form action="">
+        {% csrf_token %}
+        {{ formulario }}
+        <input type="submit" value="Agregar" >
+
+    </form>
+{% endblock main %}

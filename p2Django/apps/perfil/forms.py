@@ -26,7 +26,7 @@ class FormularioPerfil(forms.ModelForm):
         super(FormularioPerfil,self).__init__(*args,**kwargs)
         # print(self.visible_fields())
         for campoVisible in self.visible_fields():
-            campoVisible.field.widget.attrs['class'] = 'form-control'
+            campoVisible.field.widget.attrs['class'] = 'date'
     class Meta:
         model = Perfil
         fields = ('fechaNacimiento','genero')

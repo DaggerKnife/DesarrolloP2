@@ -4,10 +4,15 @@
 {{ formulario1.errors }}
 {{ formulario2.errors }}
 {% endif %}
+
+<br>
+<br>
+<br>
+<h3 class="center-align">Formulario De Registro</h3>
 <form action="/crearUsuario/" method="post">
     {% csrf_token %}
-    <section class="card mt-5">
-        <article class="card-body">
+    <section class="row">
+        <article class="col s12">
             {% for campo in formulario1 %}
             <div class="form-group">
                 <label for="campo.is_for_label">{{ campo.label }}</label>
@@ -17,7 +22,19 @@
         </article>
     </section>
     <!-- {{ formulario1 }} -->
-    {{ formulario2 }}
-    <input type="submit" class="btn btn-info btn-block" value="Registrar">
+    <section class="row">
+        <article class="col s12">
+            {{ formulario2 }}
+        </article>
+    </section>
+    
+
+    <div class="row center-align">
+        <input type="submit" class="btn btn-info btn-block center-align" value="Registrar">
+    </div>
 </form>
 {% endblock main %}
+
+<br>
+<br>
+<br>

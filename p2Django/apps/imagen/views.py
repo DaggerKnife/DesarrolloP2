@@ -13,7 +13,7 @@ def agregarPublicacion(request):
             messages.add_message(
                 request,
                 messages.SUCCESS,
-                'Publicaicón creada!!!'
+                'Publicación creada!!!'
             )
             return redirect('/perfil/')
     context = {

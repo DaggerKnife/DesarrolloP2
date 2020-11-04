@@ -106,7 +106,7 @@
           <!-- Fin  left -->
           {% if user.is_authenticated %}
           <ul class="right hide-on-med-and-down">
-            <li><a href="{% url 'perfil'%}">Bienvenido {{ user.username }}</a></li>
+            <li><a >Bienvenido {{ user.username }}</a></li>
             <li><a href="{% url 'salir' %}">Salir</a></li>
           </ul>
 
@@ -145,7 +145,7 @@
 
   {% if messages %}
   {% for message in messages %}
-  <div class="alert alert-{{message.tags}}" role="alert">
+  <div class="row center-align -{{message.tags}}" role="alert"><br>
     {{ message }}
   </div>
   

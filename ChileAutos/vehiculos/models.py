@@ -39,15 +39,16 @@ class Vehiculo(models.Model):
 '''
 
 class Vehiculo(models.Model):
-    foto = models.FileField(max_length=45, blank=False)
     marca = models.CharField(max_length=45, blank=False)
+    modelo =  models.CharField(max_length=45, blank=False)
     tipoVehiculo= models.CharField(max_length=45, blank=False)
     combustible = models.CharField(max_length=45, blank=False)
     transmision = models.CharField(max_length=45, blank=False)
+    precio = models.PositiveIntegerField()
     uso=models.CharField(max_length=45, blank=False) 
-    modelo =  models.CharField(max_length=45, blank=False)
-    precio = models.IntegerField()
+    foto = models.ImageField(upload_to='imagens')
+
     #Padre
-    usuario = models.OneToOneField(User, on_delete=models.CASCADE)
+    #usuario = models.OneToOneField(User, on_delete=models.CASCADE)
 
 

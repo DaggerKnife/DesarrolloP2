@@ -80,12 +80,12 @@ WSGI_APPLICATION = 'p2Django.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'p2django',
-        'USER': 'root',
-        'PASSWORD': 'duoc',
-        'HOST': 'localhost',
-        'PORT': '3306'
+        'ENGINE': 'django.db.backends.mysql',  #Modificar por gestor de base que Ud utiliza
+        'NAME': 'p2django', #Mantener asi
+        'USER': 'root', #Cambio de usuario si desea asociar la DB a otro
+        'PASSWORD': 'duoc', #Contraseña del usuario
+        'HOST': 'localhost', #Medio de conexion
+        'PORT': '3306'  #Puerto de conexion
     }
 }
 

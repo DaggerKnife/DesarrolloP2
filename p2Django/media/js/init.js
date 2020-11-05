@@ -77,3 +77,16 @@ document.addEventListener('DOMContentLoaded', function() {
 $(document).ready(function(){
   $('.tap-target').tapTarget();
 });
+
+
+
+
+var instance = M.Carousel.init({
+  fullWidth: true
+});
+
+// Or with jQuery
+
+$('.carousel.carousel-slider').carousel({
+  fullWidth: true
+});

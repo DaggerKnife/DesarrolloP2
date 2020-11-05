@@ -2,6 +2,15 @@
 
 {% block main %}
 
+
+{% if user.is_authenticated %}
+        <h2 class="center-align">Bienvenido {{ user.username }}</h2>
+        
+
+
+
+{% else %}
+
 <br>
 <br>
 <br>
@@ -17,7 +26,11 @@
     {% endfor %}
     <input type="submit" class="btn btn-primary btn-block" value="Ingresar">
 </form>
+<br>
+<br>
+<br>
+
+      
+{% endif %}
+
 {% endblock main %}
-<br>
-<br>
-<br>

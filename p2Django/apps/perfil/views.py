@@ -89,6 +89,12 @@ def perfil(request):
         context
     )
 
+def reset(request):
+    return render(
+        request,
+        'recuperar.html',
+        context
+    )
 
 
    

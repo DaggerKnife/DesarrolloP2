@@ -83,7 +83,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',  #Modificar por gestor de base que Ud utiliza
         'NAME': 'p2django', #Mantener asi
         'USER': 'root', #Cambio de usuario si desea asociar la DB a otro
-        'PASSWORD': 'jeremayo123', #Contraseña del usuario
+        'PASSWORD': 'duoc', #Contraseña del usuario
         'HOST': 'localhost', #Medio de conexion
         'PORT': '3306'  #Puerto de conexion
     }
@@ -138,6 +138,6 @@ MEDIA_ROOT = join(BASE_DIR, 'media')
 EMAIL_USE_TLS = True
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
-EMAIL_HOST_USER = 'jeremy.jp.99@gmail.com'
-EMAIL_HOST_PASSWORD = 'jeremayo-o123'
+EMAIL_HOST_USER = 'djangochileautos@gmail.com  '
+EMAIL_HOST_PASSWORD = 'chileautos123'
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'

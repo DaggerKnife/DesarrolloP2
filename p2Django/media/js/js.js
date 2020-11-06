@@ -260,3 +260,4 @@ function Buscar() {
     var elmnt = document.getElementById(idCard);
     elmnt.scrollIntoView();
   }
+

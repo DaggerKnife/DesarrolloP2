@@ -80,7 +80,7 @@ def salir(request):
     logout(request)
     return redirect('/inicio/')
 
-
+@login_required
 def perfil(request):
     publicaciones = Publicacion.objects.all()
     context = {

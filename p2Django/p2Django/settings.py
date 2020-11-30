@@ -75,6 +75,8 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'social_django.context_processors.backends',
+                'social_django.context_processors.login_redirect',
             ],
         },
     },
@@ -146,13 +148,14 @@ MEDIA_ROOT = join(BASE_DIR, 'media')
 
 ## Rutas para logear
 LOGIN_URL = '/'
-LOGIN_REDIRECT_URL = 'perfil'
+LOGIN_REDIRECT_URL = '/'
 LOGOUT_URL = 'salir'
 LOGOUT_REDIRECT_URL = 'ingreso'
 
 ##Valores para iniciar sesión con Facebook
 SOCIAL_AUTH_FACEBOOK_KEY = '421529248875480'
 SOCIAL_AUTH_FACEBOOK_SECRET= 'e26a80c4d7928be12baf1ce94334c4dd'
+
 
 ##Envío de 
 EMAIL_USE_TLS = True

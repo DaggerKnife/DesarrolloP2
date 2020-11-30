@@ -41,34 +41,7 @@
       <li><a href="#!">Publica como automotora </a></li>
     </ul>
 
-    <ul id="dropdown4" class="dropdown-content">
-      <li><a href="#!">Noticias </a></li>
-      <li class="divider"></li>
-      <li><a href="#!">Actualidad </a></li>
-      <li class="divider"></li>
-      <li><a href="#!">Comparativas </a></li>
-      <li class="divider"></li>
-      <li><a href="#!">Compra de auto </a></li>
-      <li class="divider"></li>
-      <li><a href="#!">Consejos </a></li>
-      <li class="divider"></li>
-      <li><a href="#!">Tendencias </a></li>
-      <li class="divider"></li>
-      <li><a href="#!">Test Drives </a></li>
-    </ul>
-
-    <ul id="dropdown5" class="dropdown-content">
-      <li><a href="#!">Particular </a></li>
-      <li class="divider"></li>
-      <li><a href="#!">Automotora </a></li>
-
-    </ul>
-
-    <ul id="dropdown6" class="dropdown-content">
-      <li><a href="#!">Quienes somos </a></li>
-      <li class="divider"></li>
-      <li><a href="#!">Ayuda</a></li>
-    </ul>
+   
 
     <!--Fin Opciones-->
 
@@ -78,7 +51,7 @@
         <div class="nav-wrapper">
           <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
           <a href="#!" data-target="mobile-demo" class="sidenav-trigger brand-logo"><img class="tamLogo"
-              src="img/Logo.JPG" alt=""></a>
+              src="../../media/img/Logo.JPG" alt=""></a>
           <!-- Navbar left -->
 
           <ul class="left hide-on-med-and-down">
@@ -91,17 +64,8 @@
             <li><a class="dropdown-trigger" href="#!" data-target="dropdown3">Vende tu auto<i
                   class="material-icons right">arrow_drop_down</i></a>
             </li>
-            <li><a class="dropdown-trigger" href="#!" data-target="dropdown4">Noticias & Eventos<i
-                  class="material-icons right">arrow_drop_down</i></a>
-            </li>
-            <li><a class="dropdown-trigger" href="#!" data-target="dropdown5">Pagos en línea<i
-                  class="material-icons right">arrow_drop_down</i></a>
-            </li>
-            <li><a href="#!">Crédito</a></li>
-            <li><a href="#!">Seguro</a></li>
-            <li><a class="dropdown-trigger" href="#!" data-target="dropdown6">Información<i
-                  class="material-icons right">arrow_drop_down</i></a>
-            </li>
+          
+            
           </ul>
           <!-- Fin  left -->
           {% if user.is_authenticated %}
@@ -110,8 +74,8 @@
             <li><a href="{% url 'salir' %}">Salir</a></li>
           </ul>
 
-
           {% else %}
+
 
           <!-- NavBar  right -->
           <ul class="right hide-on-med-and-down">
@@ -130,12 +94,28 @@
 
 
     <!-- NavBar Mobile  -->
+    {% if user.is_authenticated %}
+
     <ul class="sidenav" id="mobile-demo">
-      <li><a href="sass.html">Sass</a></li>
-      <li><a href="badges.html">Components</a></li>
-      <li><a href="collapsible.html">Javascript</a></li>
-      <li><a href="mobile.html">Mobile</a></li>
+      <li><a href="{% url 'iniciar'%}">Inicio</a></li>
+      <li><a href="{% url 'misPublicaciones'%}">Tus Publicaciones</a></li>
+      <li><a >Bienvenido {{ user.username }}</a></li>
+      <li><a href="{% url 'salir' %}">Salir</a></li>
     </ul>
+
+    {% else %}
+
+    <ul class="sidenav" id="mobile-demo">
+      <li><a href="{% url 'iniciar'%}">Inicio</a></li>
+      <li><a href="{% url 'misPublicaciones'%}">Publicaciones</a></li>
+      <li><a href="{% url 'iniciar'%}">Ingresar</a></li>
+      <li><a href="{% url 'registro' %}">Registrarse</a></li>
+    </ul>
+
+    {% endif %}
+
+
+
     <!-- Fin NavBar Mobile  -->
 
   </div>

@@ -4,8 +4,8 @@
 
 
 {% if user.is_authenticated %}
-        <h2 class="center-align">Bienvenido {{ user.username }}</h2>
-        
+<h2 class="center-align">Bienvenido {{ user.username }}</h2>
+
 
 
 
@@ -19,21 +19,43 @@
 <form action="" method="POST">
     {% csrf_token %}
     {% for campo in formulario %}
+    <div class="row">
         <div class="form-group">
             <label for="campo.id_for_label">{{ campo.label }}</label>
             {{campo}}
         </div>
+    </div>
+
+
     {% endfor %}
-    <input type="submit" class="btn btn-primary btn-block" value="Ingresar">
-</form>   
- <a class="btn blue" href="{% url 'reset_password' %}">Olvidé contraseña</a>
- 
+
+    <div class="row center-align">
+
+        <div class="col s12 m6 l6 center-align boton-login" style="margin-top: 10px;">
+            <button  class="btn green" type="submit" >Ingresar</button>
+        </div>
+        
+        <div class="col s12 m6 l6 center-align boton-login" style="margin-top: 10px;">
+            <a class="btn blue" style="background-color: #0d8af0;" href="{% url 'reset_password' %}"><i class="fab fa-facebook-square"></i>  Ingresa Con Facebook</a>
+        </div>  
+
+        <div class="col s12 m6 l6 center-align boton-login" style="margin-top: 10px;">
+            <a class="btn red" style="background-color: #0d8af0;" href="{% url 'reset_password' %}"><i class="fab fa-google"></i>  Ingresa Con Google</a>
+        </div>
+
+        <div class="col s12 m6 l6 center-align boton-login" style="margin-top: 10px;">
+            <a class="btn orange" href="{% url 'reset_password' %}">Olvidé contraseña</a>
+        </div>
+       
+    </div>
+</form>
+
 
 <br>
 <br>
 <br>
 
-      
+
 {% endif %}
 
 {% endblock main %}

@@ -3,8 +3,9 @@ from .forms import FormPublicaciones
 from django.contrib import messages
 from .models import Publicacion
 # Create your views here.
+from django.contrib.auth.decorators import login_required
 
-
+@login_required
 def agregarPublicacion(request):
     formulario = FormPublicaciones()
     if request.method == 'POST':

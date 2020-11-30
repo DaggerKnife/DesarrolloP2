@@ -40,6 +40,8 @@ INSTALLED_APPS = [
     'materializecssform',
     'apps.imagen',
     'apps.perfil',
+    'social_django'
+    
 ]
 
 MIDDLEWARE = [
@@ -52,6 +54,12 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     
 ]
+
+#Authentication_Backends
+AUTHENTICATION_BACKENDS= [
+    'social_core.backends.facebook.FacebookOAuth2',
+    'django.contrib.auth.backends.ModelBackend'
+] 
 
 ROOT_URLCONF = 'p2Django.urls'
 
@@ -83,8 +91,8 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',  #Modificar por gestor de base que Ud utiliza
         'NAME': 'p2django', #Mantener asi
         'USER': 'root', #Cambio de usuario si desea asociar la DB a otro
-        #'PASSWORD': 'jeremayo123', #Contraseña del usuario
-        'PASSWORD': 'duoc', #Contraseña del usuario
+        'PASSWORD': 'jeremayo123', #Contraseña del usuario
+        #'PASSWORD': 'duoc', #Contraseña del usuario
 
         'HOST': 'localhost', #Medio de conexion
         'PORT': '3306'  #Puerto de conexion
@@ -136,7 +144,17 @@ STATICFILES_DIRS = [
 MEDIA_URL = '/media/'
 MEDIA_ROOT = join(BASE_DIR, 'media')
 
+## Rutas para logear
+LOGIN_URL = '/'
+LOGIN_REDIRECT_URL = 'perfil'
+LOGOUT_URL = 'salir'
+LOGOUT_REDIRECT_URL = 'ingreso'
 
+##Valores para iniciar sesión con Facebook
+SOCIAL_AUTH_FACEBOOK_KEY = '421529248875480'
+SOCIAL_AUTH_FACEBOOK_SECRET= 'e26a80c4d7928be12baf1ce94334c4dd'
+
+##Envío de 
 EMAIL_USE_TLS = True
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587

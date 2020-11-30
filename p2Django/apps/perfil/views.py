@@ -4,6 +4,8 @@ from django.contrib import messages
 from django.contrib.auth import login, logout, authenticate
 ## importando el modelo desde publicaciones.....
 from apps.imagen.models import Publicacion
+from django.contrib.auth.decorators import login_required
+
 # Create your views here.
 def mostarFormularioRegistro(request):
     formulario1 = FormularioCreacion()
@@ -77,6 +79,7 @@ def iniciarSesion(request):
 def salir(request):
     logout(request)
     return redirect('/inicio/')
+
 
 def perfil(request):
     publicaciones = Publicacion.objects.all()

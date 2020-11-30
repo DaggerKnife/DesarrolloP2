@@ -83,7 +83,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',  #Modificar por gestor de base que Ud utiliza
         'NAME': 'p2django', #Mantener asi
         'USER': 'root', #Cambio de usuario si desea asociar la DB a otro
-        'PASSWORD': 'duoc', #Contraseña del usuario
+        'PASSWORD': 'jeremayo123', #Contraseña del usuario
         'HOST': 'localhost', #Medio de conexion
         'PORT': '3306'  #Puerto de conexion
     }

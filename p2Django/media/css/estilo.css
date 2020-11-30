@@ -196,3 +196,26 @@ article section div div form div div{
 .boton-login{
     margin-top: 15px;
 }
+
+
+
+
+.borderandcolor{
+        /*background-color: rgba(255,255,255,0.6);
+        background-image: url('../img/PtoMontt.jpg');*/
+        width: 15%;
+        background-size: cover;
+        background-image: linear-gradient(
+          to right, rgb(211, 234, 255), rgba(254, 254, 255, 0.267)
+          ),
+          url('../img/cloud.jpeg');
+          border: 120px;
+        border-radius:  15%;
+        scale: 0.8;
+        margin-top: 10px;     
+}
+
+
+.tamanio{
+        padding: 50%;
+}

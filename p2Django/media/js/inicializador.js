@@ -1,0 +1,1 @@
+metodos.anadirCiudad('Santiago');

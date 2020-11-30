@@ -9,7 +9,7 @@
   {% endblock css %}
 
   -->
-  
+
 
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0" />
@@ -21,8 +21,8 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
 
-  
-  
+
+
   <link rel="stylesheet" href="../../media/css/estilo.css">
   <link href="../../media/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
   <link href="../../media/css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
@@ -30,19 +30,17 @@
 
 <body>
 
-
   <!--   NAV BAR -->
   <header>
     {% include "base/header.html" %}
     {% block header %}
     {% endblock header %}
-</header>
+  </header>
 
-{% include "base/banner.html" %}
-{% block banner %}
-{% endblock banner %}
+  {% include "base/banner.html" %}
+  {% block banner %}
+  {% endblock banner %}
   <!-- fin div de navbar-->
-
 
 
 
@@ -99,22 +97,22 @@
 
 
   <!--Cuerpo del CRUD-->
-  
+
   <article>
     <section class="container">
-        
-      
-        {% block main %}
 
-        {% endblock main %}
-    
+
+      {% block main %}
+
+      {% endblock main %}
+
 
     </section>
-</article>
+  </article>
 
 
 
-<!--
+  <!--
 
   <section class="paddTop80">
     <article>
@@ -250,34 +248,36 @@
         </div>
 
       -->
-        <div class="row cardColor" id="contenidoAdd">
+  <div class="row cardColor" id="contenidoAdd">
 
-          <!-- Aca van los Autos-->
+    <!-- Aca van los Autos-->
 
-        </div>
+  </div>
 
 
-      </div>
-    </article>
+  </div>
+  </article>
   </section>
 
 
   <div class="bGcrema">
     <div class="container">
-      
-      <div class="carousel" >
+
+      <div class="carousel">
         <a class="carousel-item" href="#one!"><img src="../../media/img/miniaturas/Sedán.png"></a>
-          <a class="carousel-item" href="#two!"><img src="../../media/img/miniaturas/Convertible.png"></a>
-          <a class="carousel-item" href="#three!"><img src="../../media/img/miniaturas/Coupé.png"></a>
-          <a class="carousel-item" href="#four!"><img src="../../media/img/miniaturas/Hatchback.png"></a>
+        <a class="carousel-item" href="#two!"><img src="../../media/img/miniaturas/Convertible.png"></a>
+        <a class="carousel-item" href="#three!"><img src="../../media/img/miniaturas/Coupé.png"></a>
+        <a class="carousel-item" href="#four!"><img src="../../media/img/miniaturas/Hatchback.png"></a>
       </div>
-      
+
+      <section class="row"  id="datos"> 
+   
+      </section>
 
 
 
-      
     </div>
-<br><br>
+    <br><br>
   </div>
   <div class="bGcrema">
     <div class="container">
@@ -287,7 +287,8 @@
         <div class="row" style="padding:40px;">
           <div class="col s12 m4 " style="padding-bottom: 35px;">
             <div class="icon-block gGWhiteradio" style="padding:20px;">
-              <h2 class="center light-blue-text"><img class="max-heighIco" src="../../media/img/mano_billete.png" alt=""></h2>
+              <h2 class="center light-blue-text"><img class="max-heighIco" src="../../media/img/mano_billete.png"
+                  alt=""></h2>
               <h5 class="center">Oferta Instantánea</h5>
               <p class="light center-align">¿Necesitas vender tu auto rápido? Obtén el pago en sólo una hora.</p>
               <span class="btn center" style="display: flex; justify-content: center;">Comenzar</span>
@@ -295,7 +296,8 @@
           </div>
           <div class="col s12 m4 " style="padding-bottom: 35px;">
             <div class="icon-block gGWhiteradio" style="padding:20px;">
-              <h2 class="center light-blue-text"><img class="max-heighIco" src="../../media/img/globo_car.png" alt=""></h2>
+              <h2 class="center light-blue-text"><img class="max-heighIco" src="../../media/img/globo_car.png" alt="">
+              </h2>
               <h5 class="center">Punto Seguro</h5>
               <p class="light center-align">Punto Seguro de Chileautos es un lugar confiable para reunirse con el
                 comprador.
@@ -306,7 +308,8 @@
 
           <div class="col s12 m4 " style="padding-bottom: 35px;">
             <div class="icon-block gGWhiteradio" style="padding:20px;">
-              <h2 class="center light-blue-text"><img class="max-heighIco" src="../../media/img/profile.png" alt="" ></h2>
+              <h2 class="center light-blue-text"><img class="max-heighIco" src="../../media/img/profile.png" alt="">
+              </h2>
               <h5 class="center">Publica como automotora</h5>
               <p class="light center-align">Publica tus vehículos por un valor fijo mensual.
               </p>
@@ -355,7 +358,7 @@
           </ul>
         </div>
 
-        
+
 
         <div class="col l2 m4 s6">
           <h5 class="black-text">Ciudad</h5>
@@ -408,7 +411,7 @@
         </div>
 
 
-        
+
       </div>
     </div>
     <div class="footer-copyright blue">
@@ -428,7 +431,8 @@
           </span>
 
           <span style="font-size: 28px; color: white; padding-right: 10px;">
-            <i class="fab fa-youtube-square"><a style="font-size: 24px; color: white; padding-left: 5px;">Youtube</a></i>
+            <i class="fab fa-youtube-square"><a
+                style="font-size: 24px; color: white; padding-left: 5px;">Youtube</a></i>
           </span>
 
           <span style="font-size: 28px; color: white;">
@@ -445,16 +449,31 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
   <!--  Scripts-->
-  
 
-<script src="https://kit.fontawesome.com/2b53710f8c.js" crossorigin="anonymous"></script>
+
+  <script src="https://kit.fontawesome.com/2b53710f8c.js" crossorigin="anonymous"></script>
   <script src="../../media/js/js.js"></script>
   <script src="../../media/js/script.js"></script>
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script src="../../media/js/materialize.js"></script>
   <script src="../../media/js/init.js"></script>
-  
-  
+  <script src="../../media/js/api.js"></script>
+  <script src="../../media/js/inicializador.js"></script>
+
+
+
+  <script type="text/javascript">
+    window.onload = function Ejemplo() {
+      console.log(metodos.anadirCiudad('Arica'));
+      console.log(metodos.anadirCiudad('Valparaiso'));
+      console.log(metodos.anadirCiudad('Santiago'));
+      console.log(metodos.anadirCiudad('Puerto Montt'));
+      console.log(metodos.anadirCiudad('Concepcion'));
+      console.log(metodos.anadirCiudad('La Serena'));
+
+    }
+  </script>
+
 
 </body>
 

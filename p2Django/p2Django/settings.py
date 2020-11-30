@@ -93,8 +93,8 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',  #Modificar por gestor de base que Ud utiliza
         'NAME': 'p2django', #Mantener asi
         'USER': 'root', #Cambio de usuario si desea asociar la DB a otro
-        'PASSWORD': 'jeremayo123', #Contraseña del usuario
-        #'PASSWORD': 'duoc', #Contraseña del usuario
+        #'PASSWORD': 'jeremayo123', #Contraseña del usuario
+        'PASSWORD': 'duoc', #Contraseña del usuario
 
         'HOST': 'localhost', #Medio de conexion
         'PORT': '3306'  #Puerto de conexion
@@ -148,7 +148,7 @@ MEDIA_ROOT = join(BASE_DIR, 'media')
 
 ## Rutas para logear
 LOGIN_URL = '/'
-LOGIN_REDIRECT_URL = '/'
+LOGIN_REDIRECT_URL = '/perfil'
 LOGOUT_URL = 'salir'
 LOGOUT_REDIRECT_URL = 'ingreso'
 

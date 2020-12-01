@@ -22,7 +22,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('',include('apps.perfil.urls')),
     path('publicaciones/',include('apps.imagen.urls')),
-    path('redes/', include('social_django.urls', namespace='redes'))
+    path('redes/', include('social_django.urls', namespace='redes')),
+    path('',include('pwa.urls'))
 ]
 if settings.DEBUG:
     urlpatterns += static(

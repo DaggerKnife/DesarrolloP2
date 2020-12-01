@@ -40,7 +40,8 @@ INSTALLED_APPS = [
     'materializecssform',
     'apps.imagen',
     'apps.perfil',
-    'social_django'
+    'social_django',
+    'pwa'
     
 ]
 
@@ -155,7 +156,16 @@ LOGOUT_REDIRECT_URL = 'ingreso'
 ##Valores para iniciar sesión con Facebook
 SOCIAL_AUTH_FACEBOOK_KEY = '421529248875480'
 SOCIAL_AUTH_FACEBOOK_SECRET= 'e26a80c4d7928be12baf1ce94334c4dd'
-
+SOCIAL_AUTH_FACEBOOK_SCOPE = ['email', 'user_link']
+SOCIAL_AUTH_FACEBOOK_PROFILE_EXTRA_PARAMS = {
+    'fields': 'name, email, picture.type(Large), link'
+}
+SOCIAL_AUTH_FACEBOOK_PROFILE_EXTRA_DATA = [
+    ('name','name'),
+    ('email','email'),
+    ('picture','picture'),
+    ('link','user_link')
+]
 
 ##Envío de 
 EMAIL_USE_TLS = True
@@ -164,3 +174,7 @@ EMAIL_PORT = 587
 EMAIL_HOST_USER = 'djangochileautos@gmail.com  '
 EMAIL_HOST_PASSWORD = 'chileautos123'
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+
+
+#Archivos de configuracion , variables de configuracion para el service worket
+PWA_SERVICE_WORKER_PATH = join(BASE_DIR,'media','sw','serviceworker.js')

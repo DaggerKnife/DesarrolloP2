@@ -1,3 +1,7 @@
+{% load static %}
+{% load pwa %}
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,7 +14,8 @@
 
   -->
 
-
+  {% progressive_web_app_meta %}  
+  
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0" />
   <title>Chile Autos, Cotiza Tu Nuevo Vehiculo</title>
@@ -453,7 +458,6 @@
 
   <script src="https://kit.fontawesome.com/2b53710f8c.js" crossorigin="anonymous"></script>
   <script src="../../media/js/js.js"></script>
-  <script src="../../media/js/script.js"></script>
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script src="../../media/js/materialize.js"></script>
   <script src="../../media/js/init.js"></script>
